@@ -40,8 +40,6 @@ func TestGetAPIKey(test *testing.T) {
 			if result != testCase.ExpectedResult {
 				t.Errorf("Should return correct result \nExpected: %s\nGot: %s", testCase.ExpectedResult, result)
 			}
-
-			return
 		})
 	}
 }
