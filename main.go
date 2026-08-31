@@ -21,6 +21,10 @@ type apiConfig struct {
 	DB *database.Queries
 }
 
+func unused() {
+	// function to test the new linter
+}
+
 //go:embed static/*
 var staticFiles embed.FS
 
