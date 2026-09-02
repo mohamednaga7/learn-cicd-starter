@@ -31,3 +31,6 @@ jobs:
 
       - name: Build and push image to registry
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/ultra-palisade-507219-p3/notely-ar-repo/notely:latest .
+
+      - name: Deploy to Cloud Run
+        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/ultra-palisade-507219-p3/notely-ar-repo/notely:latest --region us-central1 --allow-unauthenticated --project ultra-palisade-507219-p3 --max-instances=4
